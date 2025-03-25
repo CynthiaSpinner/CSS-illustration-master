@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+body {
+    background-color: hsl(270, 20%, 96%);
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    height: 100vh; /* Ensure the body has a height */
+}
+.design-block {
+    display: flex;
+    height: 84%;
+    width: 40%;        
+    border-bottom: 2px solid hsl(264, 100%, 61%);
+    border-radius: 0 0 55% 55%; /* Rounded bottom edge */
+    position: relative; /* Enable positioning */
+    left: -11%; /* Move 20% of the block's width off the page to the left */
+    background: linear-gradient(to top right, hsl(264, 100%, 61%) 20%, hsl(293, 100%, 63%) 120%);
+}
+.chat-container {
+    display: flex;
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    top: 0;
+    left: 0;    
+    transform: translateY(32%) translateX(145%); /* Move even further to the right */
+    width: 17%; /* Slightly increase the width */
+    min-width: 188.571px;
+    min-height: 244.795px;
+    height: 61%; /* Slightly decrease the height */
+    z-index: 10; /* Ensure it displays on top */
+    border-radius: 27px; /* Round the edges */
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3); /* Increase bottom and right shadow */
+}
+.chat-content {
+    height: auto;
+    width: 100%;
+    margin: 10px;
+    background-color: hsla(270, 20%, 96%, 1);
+    border-radius: 18px;
+    padding: 0;
+    position:relative;
+    
+}
+.user-style-block {
+    border-radius: 18px 18px 6px 6px; /* Top-left, top-right, bottom-right, bottom-left */
+    height: 60px;
+    width: 100%;
+    background: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    margin: 0;
+    align-self: flex-start;    
+    position: relative;   
+    border: 1px solid hsl(264, 100%, 61%);
+    box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.25); /* Enhance inner shadow for more depth */
+    border: 1px solid hsla(264, 100%, 61%, 0.4); /* Slightly lighten the opacity of the border color */
+}
+.user-style-block-white {
+    background-color: hsl(0, 0%, 100%);
+    height:25px;
+    width: 55%;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-49.5%) translateY(-8px);
+
+}
+.user-heading {
+    color: hsl(0, 0%, 100%);
+    margin: 0;
+    position: absolute;    
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap; /* Prevent text wrapping */
+    width: 100%; /* Set width to 100% */
+    height: 40px;
+    padding-top: 5px; /* Add padding to the bottom */
+    text-align: center; /* Center text horizontally */
+}
+.user-avatar-wrapper {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start of the row */
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 0;
+    transform: translateY(50%); /* Center the element vertically */
+    margin-left: 10px; /* Add left margin */
+    border: 1px solid red;
+}
+.user-name {   
+    width: 50%; /* Set width to 50% */
+    position: absolute; /* Use absolute positioning */
+    top: 50%; /* Move to the vertical center */
+    left: 50%; /* Move to the horizontal center */
+    
+    display: flex; /* Use flexbox for centering content */
+    justify-content: left; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin: 0; /* Remove auto margin */
+    transform: translate(-50%, 20%); /* Adjust position to move it further down */
+     /* Add red border */
+}
+.user-name-text {
+    color: hsl(0, 0%, 100%);
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0;
+    text-align: start;
+}
+.user-status {
+    width: 50%;
+    
+    position: absolute;
+    top: calc(50% + 30px); /* Adjust spacing to ensure 5px gap */
+    line-height: 8px; /* Match line height to font size */
+    text-align: left; /* Align text to the left */
+    left: 50%; 
+    display: flex; /* Use flexbox for centering content */
+    justify-content: left; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin: 0; /* Remove auto margin */
+    transform: translate(-50%, -132%); /* Adjust position to be directly below username */
+}
+.user-status-text {
+    color: hsl(276, 100%, 81%);
+    font-size: 7px;
+    font-weight: 700;
+    margin: 0;
+    text-align: start;
+    letter-spacing: 0.5px; /* Add letter spacing */
+}
+.user-three-button-wrapper{
+    display: flex;
+    justify-content: flex-end; /* Align items to the end of the row */
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 0;
+    transform: translateY(50%); /* Center the element vertically */
+    margin-right: 10px; /* Add right margin */
+    border: 1px solid red;
+}
+.chat-messages{
+    padding: 0 8px;
+    margin-top: 10px;
+    
+}
+.left-message {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start of the row */
+    align-items: left;
+    padding: 0 3px;
+    border-radius: 8px;
+    width:60%;
+    background-color: hsl(276, 55%, 52%, .08);
+    margin-bottom: 8px;
+}
+.left-message-text {
+    color: hsl(276, 55%, 52%);
+    font-size: 8px;
+    font-weight: 700;
+    margin: 0;   
+    padding: 5px;
+    line-height: 1.4; /* Increase line height */
+}
+.right-message {
+    display: flex;
+    justify-content: flex-end; /* Align items to the end of the row */
+    align-items: right;
+    padding: 0 3px;
+    border-radius: 8px;
+    width: fit-content;
+    white-space: normal; /* Allow text to wrap */
+    margin-left: auto; /* Push the element to the right */
+    max-width: 64%; /* Ensure the width does not exceed 64% */
+    background-color: hsl(0, 0%, 100%);
+    margin-bottom: 8px;
+}
+.right-message-text {
+    color:hsl(271, 15%, 43%);
+    font-size: 8px;
+    font-weight: 700;
+    margin: 0;   
+    padding: 5px;
+    line-height: 1.4; /* Increase line height */
+}
+.price-container {
+    gap: 8px;
+    flex-direction: column; /* Ensure items are stacked vertically */
+    display: flex; /* Use flexbox for layout */
+}
+.amount-message {
+    background: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    height:auto;
+    width: 65%;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 10px 3px; /* Adjusted bottom-left corner radius */
+}
+.price-text-container {
+    display: flex;
+    background-color: transparent;
+    width: 65%;
+    border: 1px solid red;
+    
+}
+.message-text {
+    font-weight: 400;
+    margin: 0;
+    padding: 0 0 0 17px;
+    text-align: left;
+    font-size: 8px;
+    line-height: 8px; /* Match line height to font size */
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 0.2px; /* Add letter spacing */
+}
+.message-price {
+    font-weight: 700;
+    margin: 0;
+    padding: 0 5px 0 0;
+    text-align: right;
+    font-size: 14px;
+    line-height: 8px; /* Match line height to font size */
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 0.2px; /* Add letter spacing */
+    border: 1px solid red;
+    margin-left: auto; /* Move the container to the right */
+}
+.chat-input {
+    display: flex;  
+    align-items: center;
+    height: 32px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px 15px; /* Adjust border radius */
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 0 10px; /* Add padding to the sides */
+    box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.1); 
+    margin: 15px 8px;    
+    width: 83%;
+}
+.chat-input-field {
+    flex: 1; /* Allow the input field to take up remaining space */
+    border: none; /* Remove default border */
+    outline: none; /* Remove default outline */
+    font-size: 11px; /* Adjust font size */
+    font-family: 'Rubik', sans-serif; /* Match font family */
+    padding: 5px; /* Add padding inside the input field */
+    color: hsl(270, 20%, 96%); /* Set text color */
+    background-color: transparent; /* Make background transparent */
+    position: relative; /* Enable positioning */
+    top: -43px; /* Keep the input field slightly more up */
+    left: 20px; /* Move the input field further to the right */
+    font-size: 10px; /* Lower the font size */
+    top: -41px; /* Move the input field down by 2px */
+    font-weight: lighter;
+    opacity: 0.3; /* Increase the opacity slightly */
+}
+.booking-container {
+    position: absolute;
+    border: 1px solid red;
+    top: 0;
+    left: 50%; /* Adjust to center horizontally relative to its container */
+    transform: translate(10%, 60%); /* Center horizontally and adjust vertically */
+    
+}

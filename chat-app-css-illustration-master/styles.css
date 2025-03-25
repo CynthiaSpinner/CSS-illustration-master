@@ -266,8 +266,8 @@ body {
 .booking-container {
     position: absolute;
     border: 1px solid red;
-    top: 0;
+    top: 20%; /* Move the container further down */
     left: 50%; /* Adjust to center horizontally relative to its container */
     transform: translate(10%, 60%); /* Center horizontally and adjust vertically */
-    
+    width: 500px; /* Set the container width to 800px */
 }
